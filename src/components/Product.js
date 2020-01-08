@@ -15,13 +15,13 @@ export default class Product extends Component {
         this const {id, title, img, price, inCart} are multiple variables*/
         return (
             <ProductWrapper className ="col-9 col-md-6 col-lg-3 mx-auto my-3">
-                <div className="card">
+                <div className="card" style={{height:"100%"}} >
                     <ProductConsumer>
                         {
                             (value) => (
-                            <div className="img-container p-5">
+                            <div className="img-container p-5" style={{height:"100%"}} >
                             <Link to ="/details">
-                                <img src={img} alt="product" className="card-img-top img-fluid" onClick ={ () => value.handleDetails(id)
+                                <img src={img} alt="product" className="card-img-top img-fluid"  onClick ={ () => value.handleDetails(id)
                                 }/>
                             </Link>
                             <button className="cart-btn" disabled={inCart ? true : false} onClick={() => {value.addToCart(id);
